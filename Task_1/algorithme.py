@@ -40,9 +40,9 @@ random.seed(random.uniform(1,100))
 env = simpy.Environment()
 pipe = simpy.Store(env, 10)
 
-env.process(arrival(env, 1, pipe))
-env.process(depart(env, 1, pipe))
-env.run(until=40)
+env.process(arrival(env, 15, pipe))
+env.process(depart(env, 20, pipe))
+env.run(until=50)
 
 n = len(messages)
 m = mean(messages)
